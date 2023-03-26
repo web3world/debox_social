@@ -117,7 +117,7 @@
         link.href = 'data:text/plain,' + encodeURIComponent(data)
         link.click()
       }
-      fetch("./data.json")
+      fetch("./data_filter.json")
         .then((res) => res.json())
         .then((list) => {
           list = JSON.parse(localStorage.getItem('k')) || list.map(i => { i.cate = i.cate ? i.cate : ''; return i })
