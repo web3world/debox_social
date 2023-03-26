@@ -121,7 +121,7 @@
         .then((res) => res.json())
         .then((list) => {
           list = JSON.parse(localStorage.getItem('k')) || list.map(i => { i.cate = i.cate ? i.cate : ''; return i })
-          list = list.filter(i => !i.user.includes('Rico@Hotpot01Mar'))
+          list = list.filter(i => !i.user.includes('Rico@Hotpot01'))
           list = list.filter(i => !i.user.includes('RetweetedDeBox@DeBox_CN'))
           list = list.filter(i => i.cate !== '已经收集过icon了')
           try {
